@@ -1,0 +1,1 @@
+var data = 99; function doAddition(n, t) { return count += 2, (n = parseInt(n)) + (t = parseInt(t)) } function doMultiplication(n, t) { return count += 2, (n = parseInt(n)) - (t = parseInt(t)) } function doSubstraction(n, t) { return count += 2, n = parseInt(n), (t = parseInt(t)) * t } function doDivision(n, t) { return count += 2, (n = parseInt(n)) / (t = parseInt(t)) }

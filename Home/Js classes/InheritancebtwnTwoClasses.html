@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Demonstrating Inheritance btwn two classes</title>
+</head>
+
+<body>
+    <script>
+        class zeeshanclgDetails {
+            constructor() {
+                this.sclname = "ABC scholl";
+                this.scllocation = "patna";
+
+            }
+
+            displayzeeshan = () => {
+                console.log("the schoolName is " + " " + this.sclname);
+                console.log("the Location is " + " " + this.scllocation);
+            }
+        }
+        // "extends" are the pre-define keywords being supported in js u can implemnet the inheritance 
+        //extends कीवर्ड का उपयोग क्लास एक्सप्रेशन या क्लास डिक्लेरेशन में किया जाता है।
+
+        class simmidetails extends zeeshanclgDetails {
+            constructor(obj) {
+                super();     //super() keyword indicate that from th child u r going to pointout the parent object
+                this.name = obj.name;
+                this.age = obj.age;
+                this.cell = obj.cell;
+            }
+            displaysimmidetails() {
+                console.log("the name is" + " " + this.name);
+                console.log("the age is" + " " + this.age);
+                console.log("the cell is" + " " + this.cell);
+                this.displayzeeshan();
+            }
+
+        }
+
+        var s1 = new simmidetails({ name: 'farhan', age: 44, cell: 'redmi' });
+        s1.displaysimmidetails();
+
+
+    </script>
+</body>
+
+</html>

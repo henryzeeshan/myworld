@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Demostrating inhertance btwn static object</title>
+</head>
+<body>
+    <b>Inheritance</b>
+
+
+    <script>
+        
+        var schooldetails = {
+            schoolname: 'ABC school',
+            schoolloc: 'hyderbad',
+            schoolrating: 4/5,
+        };
+
+        var s1 ={
+            name: 'sadhna',
+            age : 44,
+            gender : 'female',
+            location : 'delhi',
+            displaysrddetails : function(){
+                console.log("name is "+ this.name);
+                console.log("age is "+ this.age);
+                console.log("gender is "+ this.gender);
+                console.log("school name is "+ this.schoolname);
+                console.log("rating "+ this.schoolrating);
+            }
+        };
+         s1.__proto__ = schooldetails;
+        var s2 ={
+            name: 'zeeshan',
+            age : 40,
+            gender : 'male',
+            location : 'hyderbad',
+            displaysrddetails : function(){
+                console.log("name is "+ this.name);
+                console.log("age is "+ this.age);
+                console.log("gender is "+ this.gender);
+                console.log("school name is "+ this.schoolname);
+                console.log("rating "+ this.schoolrating);
+            }
+        };
+        s2.__proto__ = schooldetails;
+        var s3 ={
+            name: 'simran',
+            age : 41,
+            gender : 'female',
+            location : 'banglore',
+            displaysrddetails : function(){
+                console.log("name is "+ this.name);
+                console.log("age is "+ this.age);
+                console.log("gender is "+ this.gender);
+                console.log("school name is "+ this.schoolname);
+                console.log("rating "+ this.schoolrating);
+            }
+        };
+        s3.__proto__ = schooldetails;                       
+        s1.displaysrddetails();
+        s2.displaysrddetails();
+        s3.displaysrddetails();
+    </script>
+</body>
+</html>

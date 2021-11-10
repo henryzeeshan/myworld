@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Demosntrating student details with ARRAY and JSON object</title>
+</head>
+
+<body>
+    <script>
+        var sdetails = {
+            name: "raj",
+            age: 20
+        };
+
+        sdetails.marks = [34, 56, 89];
+        sdetails.total = 0;
+        sdetails.avg = 0;
+
+        function getTotalAndAvg() {
+            for (var i = 0; i < sdetails.marks.length; i++) {
+                sdetails.total += sdetails.marks[i];
+            }
+            sdetails.avg = sdetails.total / sdetails.marks.length;
+        }
+
+        function displayDetails() {
+            getTotalAndAvg();
+            getGrade();
+
+            console.log("name" + " " + sdetails.name);
+            console.log("avg" + " " + sdetails.avg);
+            console.log("grade" + " " + sdetails.grade);
+        }
+
+
+
+
+        function getGrade() {       //Arrow funtion
+            if (sdetails.avg >= 40) {
+                sdetails.grade = "passed";
+            }
+            else {
+                sdetails.grade = "surprice";
+            }
+
+        };
+
+        displayDetails();              //with object(sdetails).name using
+
+
+
+                                    
+    </script>
+</body>
+
+</html>

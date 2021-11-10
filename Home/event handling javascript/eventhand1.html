@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>demonstrating of event handling</title>
+</head>
+<style>
+    li{
+        list-style: none;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid blueviolet;
+        background-color: blueviolet;
+    }
+    ul{
+        border: 2px solid;
+        width: 400px;
+        padding: 10px;
+        margin: 15px;
+        background-color: cornflowerblue;
+    }
+    .poto{
+        margin-left: 130px;
+    }
+    body{
+        background-color: crimson;
+    }
+
+    .errmsg{
+        color:red;
+        font: 12px;
+        display: none;
+
+    }
+</style>
+<body>
+    <div class="poto">
+        <ul>
+            <li>
+                enter first value :
+                <input type = "text" id="oval" placeholder="enter value" onkeypress="return dholabhai(event)">
+                <div class="errmsg frrmsg">
+                    first value is mandotry
+                </div>
+            </li>
+            <li>
+                enter second value :
+                <input type = "text" id="sval" placeholder="enter value">
+                <div class="errmsg srrmsg">
+                    second value is mandotry
+                </div>
+            </li>
+            <li>
+                <input type="button" value="Get sum" onclick="doOperation('sum')">
+                <input type="button" value="Get div" onclick="doOperation('div')">
+                <input type="button" value="Get mul" onclick="doOperation('mul')">
+                <input type="button" value="Get sub" onclick="doOperation('sub')">
+            </li>
+            <li id="rblock">
+                   the sum is: <span></span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+             function doOperation(type){
+            var a1= document.querySelector("#oval").value;
+            if(a1 == ''){                                                  //shwoing error
+               document.querySelector(".frrmsg").style.display= 'block';
+                return;
+            }else{
+                document.querySelector(".frrmsg").style.display= 'none';
+            }
+            a1=parseInt(a1);
+
+           
+            var a2 = document.querySelector("#sval").value;
+            if(a2 == ''){
+               document.querySelector(".srrmsg").style.display= 'block';
+                return;
+            }else{
+                document.querySelector(".srrmsg").style.display= 'none';
+            }
+            a2=parseInt(a2); 
+            var msg;
+            switch(type){
+                case 'sum':
+                    var sum = a1 + a2;
+                    msg = "the sum is :" +sum;
+                    break;
+                    
+                    case 'div':
+                    var div = a1 / a2;
+                    msg = "the div is :" +div;
+                    break;
+
+                    case 'mul':
+                    var mul = a1 * a2;
+                    msg = "the mul is :" +mul;
+                    break;
+
+                    case 'sub':
+                    var sub = a1 - a2;
+                    msg = "the sub is :" +sub;
+                    break;
+            } 
+            document.querySelector("span").innerText=msg;
+            
+
+          
+        }
+
+        var dholabhai= function(event){
+            console.log("event fired")
+            console.log(event);
+           // if (event.charCode >= 97 && event.charCode <= 122){      //small charcode ascii value
+            if (event.charCode >= 65 && event.charCode <= 90){
+               return false;
+            }else{
+                return true;
+            }
+            }
+            
+    </script>
+</body>
+ 
+</html>

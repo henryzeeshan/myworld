@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Traversing Methods of jquery</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+
+    <style>
+        .block{
+            border: 1px solid;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+
+   <input type="button" value="Apply" onclick="zeeshan()">
+
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li id="demo">item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+            <li>item7</li>
+        </ul>
+
+        <script>
+            function zeeshan(){
+             // $("#demo").siblings().addClass('block')
+              //$("#demo").next().addClass('block')
+              $("#demo").nextAll().addClass('block')
+             // $("#demo").prev().addClass('block')
+            }
+            </script
+</body>
+</html>

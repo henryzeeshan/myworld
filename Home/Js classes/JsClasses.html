@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document of Js Classes</title>
+</head>
+
+<body>
+    <script>
+
+        class SchoolDetails {                       //uses another class in sub class
+            constructor() {
+                this.schoolname = 'O.F.A';
+                this.Loc = 'Delhi'
+            }
+        }
+
+        class StudentDetails {
+            constructor() {
+                this.name = "zeeshan";
+                this.age = 22;
+                this.loc = 'hyderbad';
+                this.address = {                //use json
+                    pin: 801505,
+                    phone: 9986
+                };
+
+                this.arr = [                   //use array
+                    '23', '34', '44'
+                ];
+
+                this.scdetails = new SchoolDetails();         
+            }
+
+            displaydata() {
+                console.log("name is" + this.name);
+                console.log("age" + this.age);
+                console.log("loc is" + this.loc);
+
+                console.log("schhol name" + this.scdetails.schoolname);
+            }
+
+        }
+
+        s1 = new StudentDetails();      // stiudentDetails not invoked with 'new'
+        console.log(s1);
+
+
+
+    </script>
+</body>
+
+</html>

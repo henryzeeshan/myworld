@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Dynamic event handling</title>
+    <style>
+        .rblock{
+            text-align: center;
+            border: 1px solid red;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clickblock">
+        click here
+    </div>
+    
+    <div class="rblock">
+       
+    </div>
+
+
+    <script>
+        function showmsg(){
+              document.querySelector("#clickblock").addEventListener("click", function(){
+                document.querySelector(".rblock").innerHTML = 'hello good morining guys';
+              })
+             
+
+        }
+
+        showmsg();
+    </script>
+</body>
+</html>

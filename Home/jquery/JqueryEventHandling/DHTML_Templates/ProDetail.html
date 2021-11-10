@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demonstrating Product details rendering Dynamically</title>
+
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="li/jquery.loadTemplate.min.js"></script>
+<link rel ="stylesheet" type="text/css" href="app.css">
+<script type="text/javascript" src="p1Details.js"></script>
+
+</head>
+
+<body>
+    <div class="errorBlock">
+      Error while communicating with server, please try after smetime
+      
+    </div>
+      <div class="LoadingBlock">
+    <img src="https://c.tenor.com/-NoKc-auITEAAAAM/loading-buffering.gif">
+    </div>
+    <div class="container">
+        <input type="button" value="GET Data" onclick="getproductDetails()">
+        <ul id="p1DetailsHold"></ul>
+    </div>
+
+    <script id="pTemplate">
+
+    <li class="p1Details">
+      <div>product name:...</div>
+      <div>price:....</div>
+      <div>menufactured:....</div>
+      <img src=""></img>
+      <div>rating:....</div>
+    </li>
+  </script>
+    
+        
+
+</body>
+</html>

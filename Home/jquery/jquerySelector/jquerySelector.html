@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery Selecor methods</title>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <style type="text/css">
+        table, td, th, tr{
+
+        }
+
+        .Highlight{
+            background-color: green;
+            font-size: medium;
+            border: 1px solid;
+        }
+        .child{
+            color: darkblue;
+            border: 1px solid;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="Highlight" onclick="hightlightElement()">
+    <table border ="1px solid" cellpadding="5" cellspacing="5">
+
+        <thead>
+            <tr>
+                <th>Sno:</th>
+                <th>name:</th>
+                <th> age:</th>
+                <th>location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>zeeshan</td>
+                <td>20</td>
+                <td>hyderabad</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>zeeshan</td>
+                <td>20</td>
+                <td>hyderabad</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>zeeshan</td>
+                <td>20</td>
+                <td>hyderabad</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>zeeshan</td>
+                <td>20</td>
+                <td>hyderabad</td>
+            </tr> 
+        </tbody>
+
+    </table>
+
+    <div>
+        <span>item1</span>
+        <span>item2</span>
+    </div>
+    <div>
+        <b>test</b>
+        <span>test1</span>
+        <span>test2</span>
+    </div>
+    <div>
+        <span>testing1</span>
+        <span>testing2</span>
+        <span>testing3</span>
+    </div>
+   
+    <br>
+    <br>
+
+        <input type="button" value="Toggle between hide() and show()" onclick="toggle()">
+
+         <p>its a toggle methods</p>
+
+
+            <input type="button" value="click me" onclick="dojob()">
+            <div id="text" class="block">
+                hello
+            </div>
+            <script type="text/javascript">
+
+                function hightlightElement(){
+                //    $("tr").addClass('Highlight')      //addclass is a jquery methods
+              //  $("tr:even").addClass('Highlight') 
+              //$("span:first-of-type").addClass('child')
+              $("span:first").addClass('child')
+                }
+
+                  //applying css using jquery
+                function dojob(){
+                    $("#text").css('border', '1px solid')
+                    $("#text").css('color', 'blue')
+                }
+ 
+                    //as one its a  similar
+
+                $("#text").css({
+                    border: '1px solid',
+                    color: 'red',
+                })
+
+                     //toggle methods
+   
+                        function toggle(){
+                            $('p').toggle();
+                        }
+
+
+            </script>
+        
+</body>
+
+</html>

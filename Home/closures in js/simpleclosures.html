@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Closures ----Invoked annonymous function</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // annonymous = function without name
+        (function () {
+            console.log("hello");
+        })();
+        var a = 70;                     //accessable bcoz is Global variable
+        (function () {
+            console.log(a);
+            b = 10;
+            console.log(b);               //accessble bcoz is within functions
+
+
+            //when i'm define any type of funtions,object,class,data is not defined with in closures
+
+            /* function name(){
+            var c = 78;
+            console.log(c)*/
+
+        })();
+
+
+        var util = (function () {
+            var name = "raj";
+
+            function sample() {
+                console.log("i m from sample");
+            }
+            return {
+                dojob: function () {
+                    console.log("hello from do job");
+                },
+
+                doSample: function () {    
+                    sample();
+                }
+            }
+        })();
+
+        util.dojob();
+        util.doSample();
+        console.log("name is" + name);
+    </script>
+</body>
+
+</html>

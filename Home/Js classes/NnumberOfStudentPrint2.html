@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document of Js Classes</title>
+</head>
+
+<body>
+    <script>
+
+        class StudentDetails {
+            constructor(Obj) {           //user 'Obj' name object
+                this.name =Obj.name;
+                this.age = Obj.age;
+                this.loc = Obj.loc;
+                this.address = {                //use json
+                    pin: 801505,
+                    phone: 9986
+                };
+
+                this.arr = [                   //use array
+                    '23', '34', '44'
+                ];
+
+            }
+
+            displaydata() {
+                console.log("name is" + this.name);
+                console.log("age" + this.age);
+                console.log("loc is" + this.loc);
+            }
+ 
+            
+
+        }
+
+        var sdata1 ={
+           name : 'zeeshan',
+           age : 33,
+           loc: 'delhi'
+        };
+
+        var sdata2 ={
+           name : 'frahan',
+           age : 3,
+           loc: 'banglore'
+        };
+         
+        var sdata3 ={
+           name : 'shadan',
+           age : 30,
+           loc: 'delhi'
+        };
+
+        var sdata4 ={
+           name : 'adnan',
+           age : 13,
+           loc: 'hyderabad'
+        };
+
+        s1 = new StudentDetails(sdata1);
+        s1.displaydata();
+
+        s2 = new StudentDetails(sdata2);
+        s2.displaydata();
+
+        console.log(s1)
+        console.log(s2)
+
+        
+
+
+    </script>
+</body>
+
+</html>

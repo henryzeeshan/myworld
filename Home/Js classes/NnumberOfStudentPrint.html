@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document of Js Classes</title>
+</head>
+
+<body>
+    <script>
+
+        class StudentDetails {
+            constructor(uname, uage, uloc) {     //passing Parameters using multiple data from users
+                this.name = uname;
+                this.age = uage;
+                this.loc = uloc;
+                this.address = {                //use json
+                    pin: 801505,
+                    phone: 9986
+                };
+
+                this.arr = [                   //use array
+                    '23', '34', '44'
+                ];
+
+            }
+
+            displaydata() {
+                console.log("name is" + this.name);
+                console.log("age" + this.age);
+                console.log("loc is" + this.loc);
+            }
+
+
+        }
+
+        s1 = new StudentDetails("sadhna", 22, "pune");
+        s1.displaydata();
+        console.log(s1)
+
+        s2 = new StudentDetails("deling", 23, "gujrat");
+        s2.displaydata();
+        console.log(s2)
+
+
+        s3 = new StudentDetails("zeeshan", 77, "banglore");
+        s3.displaydata();
+        console.log(s3)
+
+        s4 = new StudentDetails("sholye", 25, "patna");
+        s4.displaydata();
+        console.log(s4)
+
+
+
+
+    </script>
+</body>
+
+</html>

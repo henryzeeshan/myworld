@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demostrating in User Define Exception</title>
+</head>
+<style>
+    ul{
+        width: 400px;
+       margin: auto 20px;
+       padding: 20px;
+    }
+    li{
+        list-style: none;
+        border: 1px solid;
+        padding: 5px;
+        margin: 8px;
+    }
+</style>
+<body>
+    <ul>
+        <li>
+            Enter your name - <input type="text" id="uname">
+        </li>
+        <li>
+            Enter your age - <input type="text" id="uage">
+        </li>
+        <li>
+            <input type="button" value="save details" onclick="saveDetails()" >
+        </li>
+        <li id="rBlock">
+
+        </li>
+    </ul>
+    
+    <script type="text/javascript" >
+    var saveDetails = () =>{
+        var data = {};
+        data.name = document.querySelector("#uname").value;
+        data.age = document.querySelector("#uage").value;
+        data.age = parseInt(data.age);
+
+        try{                            //The try statement lets you test a block of code for errors.
+        if(data.age < 21){
+          throw "age err"             //throw is the predefine keyword which forces the controller to jump to "catch" statement
+        }else{
+            document.querySelector("#rBlock").innerHTML = "Successfully registred";
+        }
+        console.log(data);
+       }catch(err){                  // //The catch statement lets you handle the error.
+        document.querySelector("#rBlock").innerHTML = "age can't be less than 21";
+       }
+    }
+
+
+
+
+
+    /*
+
+    if(data.age < 21){
+        document.querySelector("#rBlock").innerHTML = "age can't be less than 21";
+        }else{
+            document.querySelector("#rBlock").innerHTML = "Successfully registred";
+        }
+        console.log(data);
+    }
+
+                            //without try,catch and throw method
+
+    */
+
+    </script>
+</body>
+</html>

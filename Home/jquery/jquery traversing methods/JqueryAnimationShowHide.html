@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demonstrating of jquery animation methods</title>
+    <style type="text/css">
+        .conatiner{
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            text-align: center;
+            padding: 10px;
+            background-color: green;
+        }
+
+        .btnContainer{
+            margin: 20px;
+        }
+    </style>
+
+<script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+    <div class="btnContainer">
+       <input type="button" onclick="dojob('show')" value="Up">
+       <input type="button" onclick="dojob('hide')" value="Down">    
+       <input type="button" onclick="dojob('tog')" value="toggle">
+    </div>
+
+    <div class="conatiner">
+        content
+    </div>
+
+    <script type="text/javascript">
+      var dojob = (type) =>{
+          switch(type){
+              case 'show':
+                  $(".conatiner").slideUp(2000, function(){
+                      console.log("done");
+                  });
+                  break;
+                  case 'hide':
+                 // $(".conatiner").hide(3000);
+                 $(".conatiner").slideDown(3000);
+                  break;
+                  case 'tog':
+                 // $(".conatiner").toggle(3000);
+                 $(".conatiner").slideToggle(3000);
+                  break;
+          }
+      }
+    </script>
+</body>
+</html>

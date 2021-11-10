@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Demonstrating Timeout And Interval methods </title>
+</head>
+<body>
+    <div>welcome to our page</div>
+    <div class="thnxblock">
+      Thanks for our user for coming to page 
+    </div>
+    <div id= container>
+
+    </div>
+
+    <style>
+
+        .thnxblock{
+            text-align: center;
+            padding: 20px;
+            margin: 30px;
+            border: 1px solid;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+
+    <script>
+        var count = 0;
+          
+
+            console.log('hello');
+            var userIntrl = setInterval(function () { 
+                count++;            
+                var div = document.createElement('div');
+                div.innerHTML = "zeeshan" + count;
+                document.querySelector("#container").append(div);
+
+                if(count == 5){
+                    clearInterval(userIntrl);              
+                }
+                // console.log("how r u dude");
+                //document.querySelector(".thnxblock").style.display = 'block';   //showing after refresh
+            }, 2000);
+            console.log("bye for today");
+
+    </script>
+</body>
+</html>

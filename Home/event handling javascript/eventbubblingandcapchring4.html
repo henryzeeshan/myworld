@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Event Bubbling And Capturing in html</title>
+</head>
+<body>
+    <div class="parent">
+        parent class
+    <div class="child">
+        child class
+    </div>
+</div>
+    <style>
+        
+ body{
+     background-color: cadetblue;
+ }
+
+ .parent{
+     border: 1px solid;
+     width: 200px;
+     height: 200px;
+     background-color: darkgreen;
+ }
+ .child{
+     width: 100px;
+     height: 100px;
+     background-color: red;
+ }
+    </style>
+    <script>
+ 
+           document.querySelector(".parent").addEventListener("click", function(){
+               console.log("click happend on parent");
+           }, true);
+
+           document.querySelector(".child").addEventListener("click", function(){
+               console.log("click happend on child");
+           }, true);
+
+           
+           document.querySelector("body").addEventListener("click", function(){
+               console.log("click happend on body");
+           }, true)                                                  // iuse ture(capturing) opposite of Bubbling
+           
+
+    </script>
+</body>
+</html>

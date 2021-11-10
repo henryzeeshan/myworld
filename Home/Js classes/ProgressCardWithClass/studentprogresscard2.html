@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Student progess card generatpr</title>
+   <link rel="stylesheet" href="progress.css">
+   <script src="progress.js"></script>
+   
+</head>
+<body>
+    <div class="title">
+        studdent progesss card
+    </div>
+    <ul>
+        <li>
+            student name:
+            <input type="text" id="sname">
+        </li>
+        <li>
+            student age:
+            <input type="text" id="sage">
+        </li>
+        <li>
+            gender:
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="female">female
+            <input type="radio" name="gender" value="other">other
+        </li>
+        <li class="marks">
+            marks:
+            <input type="text" id="m1" placeholder="put ur marks">
+            <input type="text" id="m2" placeholder="put ur marks">
+            <input type="text" id="m3" placeholder="put ur marks">
+            <input type="text" id="m4" placeholder="put ur marks">
+            <input type="text" id="m5" placeholder="put ur marks">
+            
+        </li>
+        <li>
+            <input type="button" value="generate card" onclick="systemInfo()">
+        </li>
+    </ul>
+
+    <ul class="showblock">
+        <div class="title">
+               Show Data Card
+        </div>
+        <li>
+           student name:
+           <span id="s_name"></span>
+        </li>
+        <li>
+            student age:
+            <span id="s_age"></span>
+        </li>
+        <li>
+            student gender:
+            <span id="s_gender"></span>
+        </li>
+        <li>
+            total:
+            <span id="s_total"></span>
+        </li>
+        <li>
+            avg:
+            <span id="s_avg"></span>
+        </li>
+    </ul>
+</body>
+</html>
